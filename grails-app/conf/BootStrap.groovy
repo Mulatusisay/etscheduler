@@ -44,6 +44,7 @@ class BootStrap {
         assert adminUser.save(flush: true)
         adminUser.validate()
         println adminUser.errors
+        //UserRole.create adminUser, adminRole, true
     }
     def destroy = {
     }
