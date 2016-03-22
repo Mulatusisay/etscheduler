@@ -26,15 +26,15 @@ environments {
     test {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:postgresql://ec2-54-195-252-202.eu-west-1.compute.amazonaws.com:5432/d8aucno7k9hdob?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory"
-            username = "jewszvqwuzilfh"
-            password = "JIEovrwNuJ94kitsq0BpUhVuAD"
+            url = "jdbc:postgres://ejnyeihcbnjrbj:oap2WlaplWmYarMOtrMZyfU3jb@ec2-54-83-56-177.compute-1.amazonaws.com:5432/d7e2j4bet4voep?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory"
+            username = "ejnyeihcbnjrbj"
+            password = "oap2WlaplWmYarMOtrMZyfU3jb"
         }
     }
     production {
         dataSource {
             dbCreate = "update"
-            uri = new URI(System.env.DATABASE_URL?:"postgres://jdsgxvfryzbbdz:Bz0EOSf3LGvhS4jgEIaMzxjihh@ec2-54-217-231-152.eu-west-1.compute.amazonaws.com:5432/demmok54t9na9m")
+            uri = new URI(System.env.DATABASE_URL?:"postgres://ejnyeihcbnjrbj:oap2WlaplWmYarMOtrMZyfU3jb@ec2-54-83-56-177.compute-1.amazonaws.com:5432/d7e2j4bet4voep")
             url = "jdbc:postgresql://" + uri.host + ":" + uri.port + uri.path
             username = uri.userInfo.split(":")[0]
             password = uri.userInfo.split(":")[1]
