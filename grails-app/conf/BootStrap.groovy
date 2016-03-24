@@ -18,8 +18,9 @@ class BootStrap {
             Requestmap.findOrSaveByUrlAndConfigAttribute(url, 'permitAll').save(flush: true, failOnError: true)
         }
 
-        // Requestmap.findOrSaveByUrlAndConfigAttribute('/user/signup', 'permitAll').save(flush: true, failOnError: true)
-        // Requestmap.findOrSaveByUrlAndConfigAttribute('/user/saveUser', 'permitAll').save(flush: true, failOnError: true)
+         Requestmap.findOrSaveByUrlAndConfigAttribute('/staff/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
+         Requestmap.findOrSaveByUrlAndConfigAttribute('/training/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
+         Requestmap.findOrSaveByUrlAndConfigAttribute('/trainingRecord/**', 'permitAll').save(flush: true, failOnError: true)
 
         println Environment.getCurrent()
 
@@ -44,7 +45,7 @@ class BootStrap {
         assert adminUser.save(flush: true)
         adminUser.validate()
         println adminUser.errors
-        //UserRole.create adminUser, adminRole, true
+        UserRole.create adminUser, adminRole, true
     }
     def destroy = {
     }

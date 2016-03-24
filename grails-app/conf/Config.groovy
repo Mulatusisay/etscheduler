@@ -124,13 +124,15 @@ grails.plugin.springsecurity.authority.className = 'com.etscheduller.Role'
 grails.plugin.springsecurity.requestMap.className = 'com.etscheduller.Requestmap'
 grails.plugin.springsecurity.securityConfigType = 'Requestmap'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-	'/':                ['permitAll'],
-	'/index':           ['permitAll'],
-	'/index.gsp':       ['permitAll'],
-	'/assets/**':       ['permitAll'],
-	'/**/js/**':        ['permitAll'],
-	'/**/css/**':       ['permitAll'],
-	'/**/images/**':    ['permitAll'],
-	'/**/favicon.ico':  ['permitAll']
+	'/':                     ['permitAll'],
+	'/index':                ['permitAll'],
+	'/index.gsp':            ['permitAll'],
+	'/assets/**':            ['permitAll'],
+	'/**/js/**':             ['permitAll'],
+	'/**/css/**':            ['permitAll'],
+	'/**/images/**':         ['permitAll'],
+	'/**/favicon.ico':       ['permitAll'],
+    '/trainingRecord/**':    ['ROLE_ADMIN']
 ]
-
+// Enable logout without using HTTP method POST
+grails.plugin.springsecurity.logout.postOnly = false
