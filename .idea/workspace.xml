@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2783d22d-2f8a-48a8-aeb0-0759a1c9102f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="etscheduller.iws" />
@@ -702,7 +701,7 @@
       <workItem from="1458817779689" duration="8331000" />
       <workItem from="1458842066325" duration="1486000" />
       <workItem from="1458974167541" duration="6412000" />
-      <workItem from="1458987204799" duration="2929000" />
+      <workItem from="1458987204799" duration="3135000" />
     </task>
     <task id="LOCAL-00001" summary="travis &amp; gitignore added">
       <created>1458669532052</created>
@@ -740,11 +739,17 @@
       <option name="project" value="LOCAL" />
       <updated>1458989801042</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="database uri changed">
+      <created>1458990840749</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1458990840749</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49337000" />
+    <option name="totallyTimeSpent" value="49543000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1364" height="726" extended-state="0" />
@@ -801,7 +806,8 @@
     <MESSAGE value="heroku data source set" />
     <MESSAGE value="training record added" />
     <MESSAGE value="schedule" />
-    <option name="LAST_COMMIT_MESSAGE" value="schedule" />
+    <MESSAGE value="database uri changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="database uri changed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
