@@ -26,7 +26,7 @@ environments {
     test {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:postgres://ejnyeihcbnjrbj:oap2WlaplWmYarMOtrMZyfU3jb@ec2-54-83-56-177.compute-1.amazonaws.com:5432/d7e2j4bet4voep?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory"
+            url = "jdbc:postgres://qunoiwdxxtduha:U8Vc-5-LT9aG3-voSi_5sxT77N@ec2-107-22-248-166.compute-1.amazonaws.com:5432/db0r9vaj0qqhb9?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory"
             username = "ejnyeihcbnjrbj"
             password = "oap2WlaplWmYarMOtrMZyfU3jb"
         }
@@ -34,7 +34,8 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-            uri = new URI(System.env.DATABASE_URL?:"postgres://ejnyeihcbnjrbj:oap2WlaplWmYarMOtrMZyfU3jb@ec2-54-83-56-177.compute-1.amazonaws.com:5432/d7e2j4bet4voep")
+           // uri = new URI(System.env.DATABASE_URL?:"postgres://ejnyeihcbnjrbj:oap2WlaplWmYarMOtrMZyfU3jb@ec2-54-83-56-177.compute-1.amazonaws.com:5432/d7e2j4bet4voep")
+            uri = new URI(System.env.DATABASE_URL?:"postgres://qunoiwdxxtduha:U8Vc-5-LT9aG3-voSi_5sxT77N@ec2-107-22-248-166.compute-1.amazonaws.com:5432/db0r9vaj0qqhb9")
             url = "jdbc:postgresql://" + uri.host + ":" + uri.port + uri.path
             username = uri.userInfo.split(":")[0]
             password = uri.userInfo.split(":")[1]
