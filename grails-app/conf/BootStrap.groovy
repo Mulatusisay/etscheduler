@@ -21,7 +21,7 @@ class BootStrap {
          Requestmap.findOrSaveByUrlAndConfigAttribute('/staff/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
          Requestmap.findOrSaveByUrlAndConfigAttribute('/training/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
          Requestmap.findOrSaveByUrlAndConfigAttribute('/trainingRecord/**', 'permitAll').save(flush: true, failOnError: true)
-
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/schedule/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
         println Environment.getCurrent()
 
         /*if (Environment.getCurrent() != Environment.PRODUCTION) {

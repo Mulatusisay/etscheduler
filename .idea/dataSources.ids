@@ -20757,6 +20757,17 @@
       <exported-key name="fk_it77eq964jhfqtu54081ebtio" table="user_role" schema="public" catalog="etscheduller" columns="role_id"/>
       <index name="uk_irsamgnera6angm0prq1kemt2" unique="true" columns="authority"/>
     </table>
+    <table name="schedule" schema="public" catalog="etscheduller" type="TABLE">
+      <column name="id" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="version" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="schedule_pkey" columns="id"/>
+    </table>
+    <table name="schedule_training_record" schema="public" catalog="etscheduller" type="TABLE">
+      <column name="schedule_training_record_id" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="training_record_id" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="training_record_idx" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <foreign-key name="fk_j5rr4f11fj44scnhbb2dja7tl" columns="training_record_id" ref-table="training_record" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
     <table name="staff" schema="public" catalog="etscheduller" type="TABLE">
       <column name="id" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="version" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
@@ -20771,7 +20782,7 @@
       <column name="id" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="version" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="cource_name" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="expire_duration" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="expire_duration_month" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="traing_code" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="training_catagory" sqlType="varchar" precision="13" scale="0" nullable="false" jdbcType="12"/>
       <column name="types_of_training" sqlType="varchar" precision="9" scale="0" nullable="false" jdbcType="12"/>
@@ -20782,14 +20793,14 @@
       <column name="id" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="version" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="certified_date" sqlType="timestamp" precision="29" scale="6" nullable="false" jdbcType="93"/>
-      <column name="duration" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="next_schedule_date" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
       <column name="staff_id" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
-      <column name="training_id" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="training_id" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="training_status" sqlType="varchar" precision="11" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="training_record_pkey" columns="id"/>
       <foreign-key name="fk_dx3iyn215u0wk3byq0fckf4na" columns="staff_id" ref-table="staff" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="fk_5a8wvr8u5my99ic03qcutrsj3" columns="training_id" ref-table="training" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="fk_j5rr4f11fj44scnhbb2dja7tl" table="schedule_training_record" schema="public" catalog="etscheduller" columns="training_record_id"/>
     </table>
     <table name="training_record_training" schema="public" catalog="etscheduller" type="TABLE">
       <column name="training_record_training_id" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
