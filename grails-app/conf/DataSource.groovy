@@ -17,7 +17,7 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
+            dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:postgresql://localhost:5432/etscheduler"
             username = "etscheduller"
             password = "etscheduller"
@@ -25,7 +25,7 @@ environments {
     }
     test {
         dataSource {
-            dbCreate = "create-drop"
+            dbCreate = "update"
             url = "jdbc:postgres://qunoiwdxxtduha:U8Vc-5-LT9aG3-voSi_5sxT77N@ec2-107-22-248-166.compute-1.amazonaws.com:5432/db0r9vaj0qqhb9?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory"
             username = "qunoiwdxxtduha"
             password = "U8Vc-5-LT9aG3-voSi_5sxT77N"
@@ -33,7 +33,7 @@ environments {
     }
     production {
         dataSource {
-            dbCreate = "create-drop"
+            dbCreate = "update"
            // uri = new URI(System.env.DATABASE_URL?:"postgres://ejnyeihcbnjrbj:oap2WlaplWmYarMOtrMZyfU3jb@ec2-54-83-56-177.compute-1.amazonaws.com:5432/d7e2j4bet4voep")
             uri = new URI(System.env.DATABASE_URL?:"postgres://qunoiwdxxtduha:U8Vc-5-LT9aG3-voSi_5sxT77N@ec2-107-22-248-166.compute-1.amazonaws.com:5432/db0r9vaj0qqhb9")
             url = "jdbc:postgresql://" + uri.host + ":" + uri.port + uri.path
