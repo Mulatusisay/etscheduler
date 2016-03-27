@@ -2,7 +2,7 @@
 .slcache/
 .asscache
 *.iws
-/target/
+target
 *.iml
 *.ipr
 *Db.properties
