@@ -7,7 +7,7 @@
       <schema-pattern>etscheduller.pg_catalog etscheduller.public</schema-pattern>
       <default-schemas>etscheduller.pg_catalog etscheduller.public</default-schemas>
     </data-source>
-    <data-source name="etscheduller dev" uuid="d076eb1d-4e08-4dec-aa8d-becb501e5a62">
+    <data-source name="etscheduler dev" uuid="d076eb1d-4e08-4dec-aa8d-becb501e5a62">
       <user-name>etscheduller</user-name>
       <user-password>dfcfdfdedfd9dfc9dfc2dfcfdfcedfdfdfc6dfc6dfcfdfd8</user-password>
       <schema-pattern>etscheduller.pg_catalog etscheduller.public</schema-pattern>

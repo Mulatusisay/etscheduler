@@ -1,7 +1,7 @@
-import com.etscheduller.User
-import com.etscheduller.Requestmap
-import com.etscheduller.Role
-import com.etscheduller.UserRole
+import com.etscheduler.User
+import com.etscheduler.Requestmap
+import com.etscheduler.Role
+import com.etscheduler.UserRole
 import grails.util.Environment
 
 class BootStrap {

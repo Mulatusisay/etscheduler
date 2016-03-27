@@ -118,10 +118,10 @@ log4j.main = {
 
 
 // Added by the Spring Security Core plugin:
-grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.etscheduller.User'
-grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.etscheduller.UserRole'
-grails.plugin.springsecurity.authority.className = 'com.etscheduller.Role'
-grails.plugin.springsecurity.requestMap.className = 'com.etscheduller.Requestmap'
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.etscheduler.User'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.etscheduler.UserRole'
+grails.plugin.springsecurity.authority.className = 'com.etscheduler.Role'
+grails.plugin.springsecurity.requestMap.className = 'com.etscheduler.Requestmap'
 grails.plugin.springsecurity.securityConfigType = 'Requestmap'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/':                     ['permitAll'],

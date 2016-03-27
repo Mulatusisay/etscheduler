@@ -1,7 +1,7 @@
 CREATE ROLE etscheduller LOGIN ENCRYPTED PASSWORD 'md5a40d58658b63d1d96abcaa047603901a'
    VALID UNTIL 'infinity';
 
-CREATE DATABASE etscheduller
+CREATE DATABASE etscheduler
  WITH ENCODING='UTF8'
       OWNER=etscheduller
       CONNECTION LIMIT=-1;
