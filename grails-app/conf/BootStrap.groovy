@@ -13,7 +13,7 @@ class BootStrap {
         for (String url in [
                 '/', '/index', '/index.gsp', '/**/favicon.ico',
                 '/**/javascripts/**', '/**/stylesheets/**', '/**/images/**', '/assets/**',
-                '/login', '/login.*', '/login/*',
+                '/login', '/login.*', '/login/*','/staff', '/staff.*', '/staff/*',
                 '/logout', '/logout.*', '/logout/*']) {
             Requestmap.findOrSaveByUrlAndConfigAttribute(url, 'permitAll').save(flush: true, failOnError: true)
         }
@@ -22,6 +22,7 @@ class BootStrap {
          Requestmap.findOrSaveByUrlAndConfigAttribute('/training/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
          Requestmap.findOrSaveByUrlAndConfigAttribute('/trainingRecord/**', 'permitAll').save(flush: true, failOnError: true)
         Requestmap.findOrSaveByUrlAndConfigAttribute('/schedule/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/Schedule/**', 'permitAll').save(flush: true, failOnError: true)
         println Environment.getCurrent()
 
         /*if (Environment.getCurrent() != Environment.PRODUCTION) {
