@@ -132,7 +132,7 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/css/**':            ['permitAll'],
 	'/**/images/**':         ['permitAll'],
 	'/**/favicon.ico':       ['permitAll'],
-    '/TrainingRecord/**':    ['ROLE_ADMIN']
+    '/trainingRecord/**':    ['permitAll']
 ]
 // Enable logout without using HTTP method POST
 grails.plugin.springsecurity.logout.postOnly = false
