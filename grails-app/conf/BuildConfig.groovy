@@ -63,6 +63,9 @@ grails.project.dependency.resolution = {
         // plugins for the build system only
         build ":tomcat:7.0.55" //,2,.3 or ":tomcat:8.0.20"
 
+        // heroklu plugins
+        compile ':heroku:1.0.1'
+        compile ':cloud-support:1.0.8'
         // plugins for the compile step
         compile ":scaffolding:2.1.2"
         compile ':cache:1.1.8'
