@@ -1,3 +1,4 @@
+idea
 .idea/
 .slcache/
 .asscache
@@ -9,6 +10,7 @@
 *Db.script
 .classpath
 .settings
+.project
 stacktrace.log
 /*.zip
 /plugin.xml
@@ -19,3 +21,5 @@ stacktrace.log
 /out/
 /web-app/plugins
 /web-app/WEB-INF/classes
+/.link_to_grails_plugins/
+/target-eclipse/
