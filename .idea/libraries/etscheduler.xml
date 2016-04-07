@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="etscheduler">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/target/work/plugins/asset-pipeline-2.5.7/src/groovy" />
+      <root url="file://$PROJECT_DIR$/target/work/plugins/cache-1.1.8/src/java" />
+      <root url="file://$PROJECT_DIR$/target/work/plugins/scaffolding-2.1.2/src/java" />
+      <root url="file://$PROJECT_DIR$/target/work/plugins/spring-security-core-2.0.0/src/java" />
+      <root url="file://$PROJECT_DIR$/target/work/plugins/tomcat-7.0.55.3/src/java" />
+    </SOURCES>
+  </library>
+</component>
