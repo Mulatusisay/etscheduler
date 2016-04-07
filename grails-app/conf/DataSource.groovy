@@ -19,8 +19,8 @@ environments {
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:postgresql://localhost:5432/etscheduler"
-            username = "etscheduller"
-            password = "etscheduller"
+            username = "ramp"
+            password = "quality"
         }
     }
     test {

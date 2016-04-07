@@ -1696,10 +1696,6 @@
       <foreign-key name="fk_5a8wvr8u5my99ic03qcutrsj3" columns="training_id" ref-table="training" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <exported-key name="fk_j5rr4f11fj44scnhbb2dja7tl" table="schedule_training_record" schema="public" catalog="etscheduler" columns="training_record_id"/>
     </table>
-    <table name="training_record_training" schema="public" catalog="etscheduler" type="TABLE">
-      <column name="training_record_training_id" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
-      <column name="training_id" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
-    </table>
     <table name="user" schema="public" catalog="etscheduler" type="TABLE">
       <column name="id" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="version" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
