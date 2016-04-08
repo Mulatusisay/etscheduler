@@ -1,7 +1,10 @@
-sudo: required
-language: groovy
+
+language: java
 jdk:
-- oraclejdk8
+  - oraclejdk7
+ 
+script: ./grailsw refresh-dependencies
+     && ./grailsw test-app
 services:
 - postgresql
 branches:
@@ -9,11 +12,8 @@ branches:
   - master
 before_script:
 - chmod +x grailsw
-script: ./grailsw clean && ./grailsw refresh-dependencies && ./grailsw test-app --stacktrace
-deploy:
-  provider: heroku
-  api_key:
-    secure:cmd
+
+
 
   app: etscheduler
   on:
