@@ -1569,6 +1569,36 @@
       <column name="viewowner" sqlType="name" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="definition" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
     </table>
+    <table name="board" schema="public" catalog="etscheduler" type="TABLE">
+      <column name="id" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="version" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="date_created" sqlType="timestamp" precision="29" scale="6" nullable="false" jdbcType="93"/>
+      <column name="email" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="message" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="board_pkey" columns="id"/>
+    </table>
+    <table name="comment" schema="public" catalog="etscheduler" type="TABLE">
+      <column name="id" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="version" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="email" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="message" sqlType="varchar" precision="160" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="comment_pkey" columns="id"/>
+    </table>
+    <table name="dashboard" schema="public" catalog="etscheduler" type="TABLE">
+      <column name="id" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="version" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="dashboard_pkey" columns="id"/>
+    </table>
+    <table name="day_off" schema="public" catalog="etscheduler" type="TABLE">
+      <column name="id" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="version" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="day_off" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="day_off_pkey" columns="id"/>
+      <exported-key name="fk_96cnpdlld4o620sybtcgabjbv" table="work_detail_day_off" schema="public" catalog="etscheduler" columns="day_off_id"/>
+      <index name="uk_2tdjah5s5xc0yxcqnrhp97c16" unique="true" columns="day_off"/>
+    </table>
     <table name="employee_detail" schema="public" catalog="etscheduler" type="TABLE">
       <column name="id" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="version" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
@@ -1582,6 +1612,19 @@
       <primary-key name="employee_detail_pkey" columns="id"/>
       <foreign-key name="fk_s9jw0a2j1twl4ot0kgg28i5in" columns="employee_id" ref-table="staff" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="uk_s9jw0a2j1twl4ot0kgg28i5in" unique="true" columns="employee_id"/>
+    </table>
+    <table name="et_directory" schema="public" catalog="etscheduler" type="TABLE">
+      <column name="id" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="version" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="contact_name" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="extension" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="location" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_number" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="position" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="remark" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="status" sqlType="varchar" precision="14" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="et_directory_pkey" columns="id"/>
     </table>
     <table name="hibernate_sequence" schema="public" catalog="etscheduler" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
@@ -1624,11 +1667,13 @@
     <table name="qcpc" schema="public" catalog="etscheduler" type="TABLE">
       <column name="id" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="version" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="email" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="portal_link" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="other_category" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="problem" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="problem_category" sqlType="varchar" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="remark" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="subject" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="suggestion" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="title" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="qcpc_pkey" columns="id"/>
     </table>
     <table name="requestmap" schema="public" catalog="etscheduler" type="TABLE">
@@ -1663,9 +1708,9 @@
       <column name="id" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="version" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="first_name" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="id_number" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="last_name" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="middle_name" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="id_number" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="last_name" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="middle_name" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="staff_pkey" columns="id"/>
       <exported-key name="fk_s9jw0a2j1twl4ot0kgg28i5in" table="employee_detail" schema="public" catalog="etscheduler" columns="employee_id"/>
       <exported-key name="fk_dx3iyn215u0wk3byq0fckf4na" table="training_record" schema="public" catalog="etscheduler" columns="staff_id"/>
@@ -1675,26 +1720,36 @@
     <table name="training" schema="public" catalog="etscheduler" type="TABLE">
       <column name="id" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="version" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="category" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="course_duration_in_hours" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="course_id" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="course_name" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="expire_duration_month" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="traing_code" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="training_catagory" sqlType="varchar" precision="13" scale="0" nullable="false" jdbcType="12"/>
-      <column name="types_of_training" sqlType="varchar" precision="9" scale="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="prerequisite" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="refresher_duration_in_months" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="training_conducted" sqlType="varchar" precision="11" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="training_pkey" columns="id"/>
       <exported-key name="fk_5a8wvr8u5my99ic03qcutrsj3" table="training_record" schema="public" catalog="etscheduler" columns="training_id"/>
+      <index name="uk_kebichgrxkyfb0d40i3v5jja0" unique="true" columns="course_id"/>
     </table>
     <table name="training_record" schema="public" catalog="etscheduler" type="TABLE">
       <column name="id" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="version" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="certified_date" sqlType="timestamp" precision="29" scale="6" nullable="false" jdbcType="93"/>
-      <column name="next_schedule_date" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
-      <column name="staff_id" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
-      <column name="training_id" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="certificate_type" sqlType="varchar" precision="13" scale="0" nullable="false" jdbcType="12"/>
+      <column name="cource_completed_date" sqlType="timestamp" precision="29" scale="6" nullable="false" jdbcType="93"/>
+      <column name="next_refresher_date" sqlType="timestamp" precision="29" scale="6" nullable="false" jdbcType="93"/>
+      <column name="requirement" sqlType="varchar" precision="9" scale="0" nullable="false" jdbcType="12"/>
+      <column name="staff_id" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="training_id" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="training_status" sqlType="varchar" precision="11" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="training_record_pkey" columns="id"/>
       <foreign-key name="fk_dx3iyn215u0wk3byq0fckf4na" columns="staff_id" ref-table="staff" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="fk_5a8wvr8u5my99ic03qcutrsj3" columns="training_id" ref-table="training" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <exported-key name="fk_j5rr4f11fj44scnhbb2dja7tl" table="schedule_training_record" schema="public" catalog="etscheduler" columns="training_record_id"/>
+    </table>
+    <table name="training_record_training" schema="public" catalog="etscheduler" type="TABLE">
+      <column name="training_record_training_id" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="training_id" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
     </table>
     <table name="user" schema="public" catalog="etscheduler" type="TABLE">
       <column name="id" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
@@ -1720,16 +1775,24 @@
       <column name="id" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="version" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="cost_center" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="day_off" sqlType="varchar" precision="3" scale="0" nullable="true" jdbcType="12"/>
-      <column name="department" sqlType="varchar" precision="13" scale="0" nullable="false" jdbcType="12"/>
-      <column name="employee_id" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
-      <column name="position" sqlType="varchar" precision="12" scale="0" nullable="false" jdbcType="12"/>
-      <column name="sch_shift" sqlType="varchar" precision="9" scale="0" nullable="true" jdbcType="12"/>
-      <column name="seniority_date" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
+      <column name="department" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="employee_id" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="position" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="scheduled_shift" sqlType="varchar" precision="4" scale="0" nullable="false" jdbcType="12"/>
+      <column name="seniority_date" sqlType="timestamp" precision="29" scale="6" nullable="false" jdbcType="93"/>
       <column name="status" sqlType="varchar" precision="10" scale="0" nullable="false" jdbcType="12"/>
-      <column name="title" sqlType="varchar" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="team" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="title" sqlType="varchar" precision="15" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="work_detail_pkey" columns="id"/>
       <foreign-key name="fk_kyyr656j0m0ioiyyh8n6rd09l" columns="employee_id" ref-table="staff" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="fk_s0f8q70otl7kpf209l8u7a2qo" table="work_detail_day_off" schema="public" catalog="etscheduler" columns="work_detail_day_off_id"/>
+      <index name="uk_kyyr656j0m0ioiyyh8n6rd09l" unique="true" columns="employee_id"/>
+    </table>
+    <table name="work_detail_day_off" schema="public" catalog="etscheduler" type="TABLE">
+      <column name="work_detail_day_off_id" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="day_off_id" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <foreign-key name="fk_96cnpdlld4o620sybtcgabjbv" columns="day_off_id" ref-table="day_off" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_s0f8q70otl7kpf209l8u7a2qo" columns="work_detail_day_off_id" ref-table="work_detail" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
     </table>
     <procedure name="RI_FKey_cascade_del" schema="pg_catalog" catalog="etscheduler" type="2" remarks="cmVmZXJlbnRpYWwgaW50ZWdyaXR5IE9OIERFTEVURSBDQVNDQURF">
       <prototype>

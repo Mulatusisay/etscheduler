@@ -12,7 +12,9 @@ class UserRole implements Serializable {
 
 	User user
 	Role role
-
+//	String toString(){
+//		"${user},${role}"
+//	}
 	UserRole(User u, Role r) {
 		this()
 		user = u

@@ -5,7 +5,7 @@ input, select, textarea {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	line-height: 1.1;
+	line-height: .5;
 }
 
 /* BASE LAYOUT */
@@ -40,15 +40,18 @@ body {
 	background: #ffffff;
 	color: #333333;
 	margin: 0 auto;
-	max-width: 960px;
+	max-width: 1050px;
 	overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
 	   -moz-box-shadow: 0 0 0.3em #255b17;
 	-webkit-box-shadow: 0 0 0.3em #255b17;
 	        box-shadow: 0 0 0.3em #255b17;
+	position: relative;/*new adds*/
 }
 
 #grailsLogo {
 	background-color: #abbf78;
+	height:50px;
+
 }
 
 /* replace with .no-boxshadow body if you have modernizr available */
@@ -76,7 +79,7 @@ h1 {
 	color: #48802c;
 	font-weight: normal;
 	font-size: 1.25em;
-	margin: 0.8em 0 0.3em 0;
+	margin: 0.5em 0 0.3em 0;
 }
 
 ul {
@@ -91,7 +94,7 @@ img {
 
 #grailsLogo a {
 	display: inline-block;
-	margin: 1em;
+	margin: .5em;
 }
 
 .content {
@@ -99,7 +102,7 @@ img {
 
 .content h1 {
 	border-bottom: 1px solid #CCCCCC;
-	margin: 0.8em 1em 0.3em;
+	margin: 0.5em 1em 0.3em;
 	padding: 0 0.25em;
 }
 
@@ -111,7 +114,7 @@ img {
 	background: #abbf78;
 	color: #000;
 	clear: both;
-	font-size: 0.8em;
+	font-size: 0.5em;
 	margin-top: 1.5em;
 	padding: 1em;
 	min-height: 1em;
@@ -136,7 +139,7 @@ img {
 
 .nav {
 	background-color: #efefef;
-	padding: 0.5em 0.75em;
+	padding: 0.3em 0.55em;
 	   -moz-box-shadow: 0 0 3px 1px #aaaaaa;
 	-webkit-box-shadow: 0 0 3px 1px #aaaaaa;
 	        box-shadow: 0 0 3px 1px #aaaaaa;
@@ -206,8 +209,8 @@ img {
 
 fieldset,
 .property-list {
-	margin: 0.6em 1.25em 0 1.25em;
-	padding: 0.3em 1.8em 1.25em;
+	margin: 0.5em 1em 0 1em;
+	padding: 0.3em 1em 1em;
 	position: relative;
 	zoom: 1;
 	border: none;
@@ -220,14 +223,14 @@ fieldset,
 }
 
 .fieldcontain {
-	margin-top: 1em;
+	margin-top: .5em;
 }
 
 .fieldcontain label,
 .fieldcontain .property-label {
 	color: #666666;
 	text-align: right;
-	width: 25%;
+	width: 20%;
 }
 
 .fieldcontain .property-label {
@@ -248,8 +251,8 @@ label {
 input, select, textarea {
 	background-color: #fcfcfc;
 	border: 1px solid #cccccc;
-	font-size: 1em;
-	padding: 0.2em 0.4em;
+	font-size: .8em;
+	padding: 0.2em .5em;
 }
 
 select {
@@ -261,8 +264,8 @@ select[multiple] {
 }
 
 textarea {
-	width: 250px;
-	height: 150px;
+	width: 450px;
+	height: 200px;
 	overflow: auto; /* IE always renders vertical scrollbar without this */
 	vertical-align: top;
 }
@@ -410,16 +413,16 @@ tr {
 }
 
 tr>td:first-child, tr>th:first-child {
-	padding-left: 1.25em;
+	padding-left: 1em;
 }
 
 tr>td:last-child, tr>th:last-child {
-	padding-right: 1.25em;
+	padding-right: 1em;
 }
 
 td, th {
-	line-height: 1.5em;
-	padding: 0.5em 0.6em;
+	line-height: 1em;
+	padding: 0.3em 0.4em;
 	text-align: left;
 	vertical-align: top;
 }
@@ -432,8 +435,8 @@ th {
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#eaeaea')";
 	color: #666666;
 	font-weight: bold;
-	line-height: 1.7em;
-	padding: 0.2em 0.6em;
+	line-height: 1.5em;
+	padding: 0.2em 0.4em;
 }
 
 thead th {

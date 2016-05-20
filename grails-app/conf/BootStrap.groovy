@@ -12,33 +12,46 @@ class BootStrap {
         // Request map Stored in Database
         for (String url in [
                 '/', '/index', '/index.gsp', '/**/favicon.ico',
-                '/**/javascripts/**', '/**/stylesheets/**', '/**/images/**', '/assets/**',
+                '/**/javascripts/**', '/**/stylesheets/**', '/**/images/**', '/assets/**','/starter/**','/dboard/**',
                 '/login', '/login.*', '/login/*',
                 '/logout', '/logout.*', '/logout/*']) {
             Requestmap.findOrSaveByUrlAndConfigAttribute(url, 'permitAll').save(flush: true, failOnError: true)
         }
         // Permit All
         //  Requestmap.findOrSaveByUrlAndConfigAttribute('/dashboard/**', 'permitAll').save()
-         Requestmap.findOrSaveByUrlAndConfigAttribute('/Schedule/**', 'permitAll').save(flush: true, failOnError: true)
-         Requestmap.findOrSaveByUrlAndConfigAttribute('/trainingRecord/index.gsp', 'permitAll').save(flush: true, failOnError: true)
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/Schedule/**', 'permitAll').save(flush: true, failOnError: true)
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/trainingRecord/', 'permitAll').save(flush: true, failOnError: true)
         Requestmap.findOrSaveByUrlAndConfigAttribute('/qcpc/index/*', 'permitAll').save(flush: true, failOnError: true)
         Requestmap.findOrSaveByUrlAndConfigAttribute('/qcpc/**', 'permitAll').save(flush: true, failOnError: true)
         Requestmap.findOrSaveByUrlAndConfigAttribute('/qcpc.*', 'permitAll').save(flush: true, failOnError: true)
         Requestmap.findOrSaveByUrlAndConfigAttribute('/qcpc/*', 'permitAll').save(flush: true, failOnError: true)
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/etDirectory/**', 'permitAll').save(flush: true, failOnError: true)
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/comment/**', 'permitAll').save(flush: true, failOnError: true)
+       // Requestmap.findOrSaveByUrlAndConfigAttribute('/etDirectory/show/', 'permitAll').save(flush: true, failOnError: true)
 
         // Added for accessing .. by user name
        // Requestmap.findOrSaveByUrlAndConfigAttribute('/blog/**', 'permitAll').save()
 
         // Permitted to Logged In Users Only
-         Requestmap.findOrSaveByUrlAndConfigAttribute('/staff/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
-         Requestmap.findOrSaveByUrlAndConfigAttribute('/training/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
-         Requestmap.findOrSaveByUrlAndConfigAttribute('/trainingRecord/**', 'isFullyAuthenticated()').save(flush: true, failOnError: true)
-         Requestmap.findOrSaveByUrlAndConfigAttribute('/schedule/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
-         Requestmap.findOrSaveByUrlAndConfigAttribute('/employeedetail/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
-        Requestmap.findOrSaveByUrlAndConfigAttribute('/workdetail/create', 'ROLE_ADMIN').save(flush: true, failOnError: true)
-        Requestmap.findOrSaveByUrlAndConfigAttribute('/workdetail/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
-        Requestmap.findOrSaveByUrlAndConfigAttribute('/workdetail/index/*', 'ROLE_ADMIN').save(flush: true, failOnError: true)
-
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/user/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/role/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/userRole/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/dayOff/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/dashboard/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/staff/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/training/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/trainingRecord/**', 'isFullyAuthenticated()').save(flush: true, failOnError: true)
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/schedule/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/schedule/list', 'ROLE_ADMIN').save(flush: true, failOnError: true)
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/employeeDetail/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/workDetail/create', 'ROLE_ADMIN').save(flush: true, failOnError: true)
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/workDetail/**', 'ROLE_ADMIN').save(flush: true, failOnError: true)
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/workDetail/index/*', 'ROLE_ADMIN').save(flush: true, failOnError: true)
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/etDirectory/create', 'ROLE_ADMIN').save(flush: true, failOnError: true)
+        Requestmap.findOrSaveByUrlAndConfigAttribute('/comment/index', 'ROLE_ADMIN').save(flush: true, failOnError: true)
+//        Requestmap.findOrSaveByUrlAndConfigAttribute('/etDirectory/save', 'ROLE_ADMIN').save(flush: true, failOnError: true)
+//        Requestmap.findOrSaveByUrlAndConfigAttribute('/etDirectory/edit/', 'ROLE_ADMIN').save(flush: true, failOnError: true)
+//        Requestmap.findOrSaveByUrlAndConfigAttribute('/etDirectory/delete/', 'ROLE_ADMIN').save(flush: true, failOnError: true)
         //************************************************************************************************************
 
          print("Test data generation in progress ...")

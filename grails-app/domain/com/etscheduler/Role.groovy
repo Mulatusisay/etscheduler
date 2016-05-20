@@ -10,7 +10,9 @@ class Role implements Serializable {
 	private static final long serialVersionUID = 1
 
 	String authority
-
+//	String toString(){
+//		"${authority}"
+//	}
 	Role(String authority) {
 		this()
 		this.authority = authority

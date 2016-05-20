@@ -14,9 +14,9 @@ class EmployeeDetail {
     }
 
     static constraints = {
-        employee unique: true
+        employee unique: true, blank:false, nullable: false
         phoneNumber  blank: true, nullable: true
-        email email: true,blank: true, nullable: true
+        email email: true, nullable: true
         birthDate blank:true
         gender inList: ["M","F"]
         address  blank: true, nullable: true

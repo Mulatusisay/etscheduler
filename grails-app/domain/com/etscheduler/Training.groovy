@@ -1,28 +1,27 @@
 package com.etscheduler
 
-
-
 class Training {
-    String traingCode
-    String courseName
-    Integer expireDurationMonth
-    String typesOfTraining
-    String trainingCatagory
-
-
-    //static hasMany = [trainingRecord: TrainingRecord]
-    //static mappedBy = [expDate:"exDuration"]
+    String  courseId
+    String  courseName
+    String  description
+    Integer courseDurationInHours
+    String  category
+    Integer refresherDurationInMonths
+    String  prerequisite
+    String  trainingConducted
 
     String toString(){
-        "${courseName},${expireDurationMonth}"
+        "${courseId},${courseName},${refresherDurationInMonths}"//,${expireDurationMonth}
     }
 
     static constraints = {
-        traingCode blank: true, nullable: true
-        courseName blank: false
-        expireDurationMonth blank: false
-        typesOfTraining inList: ["Mandatory", "Optional"]
-        trainingCatagory inList: ["IATA", "IOSA", "Star Alliance","ETA"]
-
+        courseId blank: false, nullable: false, unique: true
+        courseName blank: false, nullable: false
+        description blank: true, nullable: true
+        courseDurationInHours blank: true, nullable: false
+        category blank: true , nullable: true
+        refresherDurationInMonths blank:true, nullable: true
+        trainingConducted inList: ["On-line", "Class Rooom", "Practical", "OJT"]
+        prerequisite blank: true, nullable: true
     }
 }
