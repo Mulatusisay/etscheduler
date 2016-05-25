@@ -1,14 +1,17 @@
 
-%{--<%@ page import="staffschedule.index" or OPS.ADMIN %>
-<%@ page contentType="text/html;charset=UTF-8" %>--}%
+
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
 
 	<!-- /.website title -->
 	<meta charset="UTF-8">
-	<title>ET-Quality</title>
+	<title>ET|Quality</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}" type="image/x-icon">
+	<link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.png')}">
+	<link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
 	<!-- CSS Files -->
 	<link href="${request.contextPath}/starter/css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<link href="${request.contextPath}/starter/css/font-awesome.min.css" rel="stylesheet">
@@ -86,11 +89,11 @@
 
 					<!-- /.main title -->
 				<h1 class="wow fadeInLeft">
-					ET Quality Portal
+					ADD HUB Ramp Quality and Safety
 				</h1>
 				<!-- /.header paragraph -->
 				<div class="landing-text wow fadeInUp">
-					<p>This is a portal page for Training Tracking System and Staff Scheduling to ADD airport operation. Designed to increase efficiency and access to operational tools and tips. ET-Quality is flexible to suit operational activities, centralized training record system, and create paperless environment . Try it now and upgrade your work style!</p>
+				<p>This is Ethiopian Ramp Quality Assurance and Safety scheduling system designed for Training Tracking, Staff Scheduling to ADD Hub airport operation. It is flexible to assist planning activity, access to ACE tools and operational tips. </br>Create paperless environment & upgrade your work style!</p>
 				</div>
 				<!-- /.header button -->
 				<div class="head-btn wow fadeInLeft">

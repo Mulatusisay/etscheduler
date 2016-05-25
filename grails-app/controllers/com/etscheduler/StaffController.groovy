@@ -15,11 +15,11 @@ class StaffController {
         params.max = Math.min(max ?: 10, 100)
         respond Staff.list(params), model: [staffInstanceCount: Staff.count()]
     }
-    def list(Integer max) {
+    /*def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Staff.list(params), model: [staffInstanceCount: Staff.count()]
-    }
-    def trainee() {
+    }*/
+  /*  def trainee() {
         //  def record=TrainingRecord.findAllByNextScheduleDateBetween(new Date()-30,new Date()+90 )
         //def result=WorkDetail.findAllByTitle("Agent")
         def query=Staff.where {
@@ -32,7 +32,7 @@ class StaffController {
         // def query=Staff.findAllByIdNumberLessThan(18605)
         //def count=Staff.countByIdNumberLessThan(18605)
         render view: 'index', model: [staffInstanceList:trainee, staffInstanceCount:count]
-    }
+    }*/
 
 
     def show(Staff staffInstance) {

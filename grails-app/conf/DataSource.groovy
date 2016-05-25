@@ -33,7 +33,7 @@ environments {
     }
     production {
         dataSource {
-            dbCreate = "update"
+            dbCreate = "create-drop"
            // uri = new URI(System.env.DATABASE_URL?:"postgres://ejnyeihcbnjrbj:oap2WlaplWmYarMOtrMZyfU3jb@ec2-54-83-56-177.compute-1.amazonaws.com:5432/d7e2j4bet4voep")
             uri = new URI(System.env.DATABASE_URL?:"postgres://jvajgutqlggalr:PS1cajdVxy5VfuJ0aCNrh-ioCn@ec2-54-235-246-67.compute-1.amazonaws.com:5432/d7mpr1go8ohiqm")
             url = "jdbc:postgresql://" + uri.host + ":" + uri.port + uri.path

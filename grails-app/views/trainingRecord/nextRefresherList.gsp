@@ -254,7 +254,7 @@
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="../staff/create"><i class="fa fa-circle-o"></i> Create Employee</a></li>
-                        <li><a href="../staff/list"><i class="fa fa-circle-o"></i> Employee List</a></li>
+                        <li><a href="../staff"><i class="fa fa-circle-o"></i> Employee List</a></li>
                         <li><a href="#"><i class="fa fa-circle-o"></i> Profile</a></li>
                     </ul>
                 </li>
