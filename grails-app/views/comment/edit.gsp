@@ -5,6 +5,11 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'comment.label', default: 'Comment')}" />
 		<title><g:message code="default.edit.label" args="[entityName]" /></title>
+		<link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}" type="image/x-icon">
+		<link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.png')}">
+		<link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
+		<g:set var="entityName" value="${message(code: 'comment.label', default: 'Comment')}" />
+		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
 		<a href="#edit-comment" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>

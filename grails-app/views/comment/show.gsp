@@ -3,7 +3,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
+
 		<meta name="layout" content="main">
+		<link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}" type="image/x-icon">
+		<link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.png')}">
+		<link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
+		<g:set var="entityName" value="${message(code: 'comment.label', default: 'Comment')}" />
+		<title><g:message code="default.list.label" args="[entityName]" /></title>
 		<g:set var="entityName" value="${message(code: 'comment.label', default: 'Comment')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>

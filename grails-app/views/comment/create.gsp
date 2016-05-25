@@ -7,8 +7,13 @@
 
 	<!-- /.website title -->
 	<meta charset="UTF-8">
-	<title>ET-Quality</title>
+	%{--<title>ET-Quality</title>--}%
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}" type="image/x-icon">
+	<link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.png')}">
+	<link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
+	<g:set var="entityName" value="${message(code: 'comment.label', default: 'Comment')}" />
+	<title><g:message code="default.list.label" args="[entityName]" /></title>
 	<!-- CSS Files -->
 	<link href="${request.contextPath}/starter/css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<link href="${request.contextPath}/starter/css/font-awesome.min.css" rel="stylesheet">
@@ -111,11 +116,11 @@
 				<ul class="nav navbar-nav">
 					<li><a href="#intro">About</a></li>
 					<li><a href="#feature">Features</a></li>
-					<li><a href="#download">Ideas</a></li>
+					<li><a href="#">Portal</a></li>
 					<li><a href="#package">ACE</a></li>
-					<li><a href="qcpc/create">QCPC</a></li>
-					<li><a href="etDirectory">Phone Directory</a></li>
-					<li><a href="dashboard">Dashboard</a></li>
+					<li><a href="../qcpc/create">QCPC</a></li>
+					<li><a href="../etDirectory">Phone Directory</a></li>
+					<li><a href="../dashboard">Dashboard</a></li>
 				</ul>
 			</div>
 		</div>

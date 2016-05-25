@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     %{--<title>ET | RQAS-TMS </title>--}%
-    <g:set var="entityName" value="${message(code: 'etDirectory.label', default: 'EtDirectory')}" />
+    <g:set var="entityName" value="${message(code: 'staff.label', default: 'Employee')}" />
     <title><g:message code="default.list.label" args="[entityName]" /></title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -404,16 +404,16 @@
 
                                         %{--<td>${fieldValue(bean: staffInstance, field: "workDetail")}</td>--}%
                                         <td> <g:if test="${staffInstance?.workDetail}">
-                                                <li class="fieldcontain">
+                                            <li class="fieldcontain">
 
-                                                    <g:each in="${staffInstance.workDetail}" var="w">
-                                                        <span class="property-value" aria-labelledby="workDetail-label"><g:link controller="workDetail"
-                                                                                                                                action="show"
-                                                                                                                                id="${w.id}">${w?.encodeAsHTML()}</g:link></span>
-                                                    </g:each>
+                                                <g:each in="${staffInstance.workDetail}" var="w">
+                                                    <span class="property-value" aria-labelledby="workDetail-label"><g:link controller="workDetail"
+                                                                                                                            action="show"
+                                                                                                                            id="${w.id}">${w?.encodeAsHTML()}</g:link></span>
+                                                </g:each>
 
-                                                </li>
-                                            </g:if>
+                                            </li>
+                                        </g:if>
                                         </td>
                                         %{--<td>${fieldValue(bean: staffInstance, field: "employeeDetail")}</td>--}%
                                         <td> <g:if test="${staffInstance?.employeeDetail}">
@@ -423,8 +423,8 @@
                                                             controller="employeeDetail" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></span>
                                                 </g:each>
                                             </li>
-                                            </g:if>
-                                         </td>
+                                        </g:if>
+                                        </td>
 
                                     </tr>
                                 </g:each>
@@ -587,4 +587,7 @@
 </script>
 </body>
 </html>
+
+
+
 
